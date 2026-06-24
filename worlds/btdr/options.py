@@ -20,15 +20,17 @@ class IncludeMapCompletion(Toggle):
 class MapCompletionPercentRequired(Range):
     """
     How much the map of each floor needs to be completed.
-    This option requires 'Include Map Completion' to work
+    This option requires 'Include Map Completion' to work.
+    Please note, the map percentage in the game is precisely down the hundredths of a percent, the options don't properly reflect that.
+    E.G. '5000' will require 50.00% map completion in-game.
     """
 
     display_name = "Map Completion Percent Required"
     
     range_start = 1
-    range_end = 100
+    range_end = 10000
 
-    default = 50
+    default = 5000
 
 @dataclass
 class BrandishTheDarkRevenantOptions(PerGameCommonOptions):
